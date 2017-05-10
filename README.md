@@ -1,2 +1,2 @@
 # discourse-theme-barbican-stack
-The base for the Barbican Discourse theme
+An optional view for the Discourse Barbican theme
