@@ -2,34 +2,35 @@
 ======================================================================================================================= */
 
 //clear clutter from topic list
-.topic-list:not(.topic-list-latest){
-    
-    a.topic-featured-link{
+.topic-list:not(.topic-list-latest) {
+    a.topic-featured-link {
         opacity: 0;
     }
-     .views{
-        display: none;
-     }
-     .activity{
-         display: none;
-     }
-     .posters .avatar{
-         display: none;
-     }
-     .posters .avatar.latest{
-         display: inline-block;
-     }
-     th.posters{
-         content: "test";
-     }
-    td[colspan="2"] + td.posters{
+    .views {
         display: none;
     }
-    td[colspan="2"] .topic-thumbnail{
+    .activity {
+        display: none;
+    }
+    td.category{
+        display:none;
+    }
+    .posters .avatar {
+        display: none;
+    }
+    .posters .avatar.latest {
+        display: inline-block;
+    }
+    th.posters {
+        content: "test";
+    }
+    td[colspan="2"]+td.posters {
+        display: none;
+    }
+    td[colspan="2"] .topic-thumbnail {
         float: right;
         padding-right: 160px;
     }
-    
     .num a.badge-posts {
         font-weight: lighter;
         font-size: 2em;
@@ -41,7 +42,7 @@
     font-size: 1.5em;
 }
 
-.topic-thumbnail{
+.topic-thumbnail {
     float: right;
     padding-right: 85px;
 }
@@ -55,32 +56,32 @@ img.avatar {
     border-radius: 10%;
 }
 
-td.posters img.avatar{
+td.posters img.avatar {
     width: 40px;
     height: 40px;
 }
 
 //only show topic actions on hover and increase opacity of categories
-.topic-list .topic-actions, .topic-list .topic-rating {
+.topic-list .topic-actions,
+.topic-list .topic-rating {
     opacity: 0;
-
 }
 
-.topic-list>tbody>tr:hover{
-    
-    a.topic-featured-link{
+.topic-list>tbody>tr:hover {
+    a.topic-featured-link {
         color: $tertiary;
         opacity: 1;
         transition: opacity .25s ease-in-out;
         -moz-transition: opacity .25s ease-in-out;
         -webkit-transition: opacity .25s ease-in-out;
     }
-    .topic-actions, .topic-rating {
+    .topic-actions,
+    .topic-rating {
         opacity: .35;
         transition: opacity .25s ease-in-out;
         -moz-transition: opacity .25s ease-in-out;
         -webkit-transition: opacity .25s ease-in-out;
-        &:hover{
+        &:hover {
             opacity: 1;
         }
     }
