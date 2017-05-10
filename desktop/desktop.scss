@@ -56,11 +56,6 @@ td.posters img.avatar {
 }
 
 //only show topic actions on hover and increase opacity of categories
-.topic-list .topic-actions,
-.topic-list .topic-rating {
-    opacity: 0;
-}
-
 .topic-list>tbody>tr:hover {
     a.topic-featured-link {
         color: $tertiary;
@@ -68,16 +63,6 @@ td.posters img.avatar {
         transition: opacity .25s ease-in-out;
         -moz-transition: opacity .25s ease-in-out;
         -webkit-transition: opacity .25s ease-in-out;
-    }
-    .topic-actions,
-    .topic-rating {
-        opacity: .35;
-        transition: opacity .25s ease-in-out;
-        -moz-transition: opacity .25s ease-in-out;
-        -webkit-transition: opacity .25s ease-in-out;
-        &:hover {
-            opacity: 1;
-        }
     }
     .main-link .topic-category {
         opacity: 1;
