@@ -1,0 +1,261 @@
+//hack for maximized code edit screen, not sure why it broke yet?
+.customize .current-style.maximized .ace-wrapper{
+    height: 80vh;
+}
+
+.category-list .category .category-name{
+    float:right;
+    width: 90%;
+}
+
+.category-list .category .category-name + div{
+    width: 10%;
+}
+
+.user-main .about .controls {
+    width: initial;
+}
+
+/* Header - Styling for the navigation header.
+======================================================================================================================= */
+
+.d-header {
+    box-shadow: inset 0 0 10px black;
+}
+
+.hamburger-panel .menu-panel, .user-menu .menu-panel{
+    width: 25% !important;
+    top: 63px !important;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    
+    .notifications{
+        font-size: .75em;
+        line-height: 1.5em;
+    }
+}
+
+.category-links:hover{
+    .category-link{
+        height: 20px;
+        font-size: .5em;
+        line-height: .5em;
+    }
+}
+
+.category-link{
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.5s;
+    color: #FFF;
+    margin: 0px !important;
+}
+
+/* Category Selector - Styling for large category selector on the left.
+======================================================================================================================= */
+.badge-wrapper.bullet span.badge-category-parent-bg, .badge-wrapper.bullet span.badge-category-parent-bg {
+    width: 2.5px; 
+}
+
+@media (min-width: 1280px) {
+    //anchor category name
+    ol.category-breadcrumb{
+        position: relative;
+    }
+    
+    //vertically align current category title to the left
+    .list-controls .category-breadcrumb li:first-of-type > a.badge-category:first-of-type{
+        transform: rotate(-90deg);
+        transform-origin: right bottom 0;
+        background-color: rgba(0,0,0,0) !important;
+        font-weight: bold;
+        font-size: 5em;
+        position: fixed;
+        right: 87vw;
+        text-align: right;
+        min-width: 80vh;
+
+        &:hover{
+            color: $quaternary !important;
+            -moz-transition: all .25s ease-in-out;
+            -o-transition: all .25s ease-in-out;
+            -webkit-transition: all .25s ease-in-out;
+        }
+    }
+    .list-controls .category-breadcrumb li:first-of-type > a.badge-category:not(.home):first-of-type{
+        top: 40px;
+        left: -960px;
+    }
+    
+    .list-controls .category-breadcrumb li.bullet:first-of-type > .badge-category{
+        background-color: rgba(0,0,0,0) !important;
+    }
+    
+    //move category dropdown above current category title
+    .list-controls .category-breadcrumb li:first-of-type .category-dropdown-button{
+        position: fixed;
+        top: 80px;
+        left: 11vw;
+        background-color: rgba(0,0,0,0) !important;
+        font-size: 2em !important;
+    }
+    
+    //have category dropdown menu fill screen
+    .list-controls .category-breadcrumb li:first-of-type .category-dropdown-menu{
+        position: fixed;
+        top: 80px;
+        left: 14vw;
+        width: 80vw;
+        max-height: 100vh;
+    }
+    
+    //firefox posiitioning hacks
+    @-moz-document url-prefix() { 
+      .list-controls .category-dropdown-button{ 
+         left: 12vw;
+      }
+      .list-controls .category-dropdown-menu{
+          left: 15vw;
+      }
+    }
+    
+    //increase font of category dropdown menu choices
+    .list-controls .category-dropdown-menu .cat a{
+        font-size: 3em;
+        max-width: 100%;
+        line-height: 1.2em;
+        &:hover{
+            color: $quaternary !important;
+            -moz-transition: all .25s ease-in-out;
+            -o-transition: all .25s ease-in-out;
+            -webkit-transition: all .25s ease-in-out;
+        }
+        span:hover{
+            color: $quaternary !important;
+            -moz-transition: all .25s ease-in-out;
+            -o-transition: all .25s ease-in-out;
+            -webkit-transition: all .25s ease-in-out;
+        }
+    }
+    
+    .list-controls .category-dropdown-menu .badge-wrapper.bullet .badge-category {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 1570px) and (min-width: 1280px) {
+    
+    .list-controls .category-breadcrumb li:first-of-type > a.badge-category:first-of-type{
+        top: 70px !important;
+        right: 94vw;
+        font-size: 3em;
+    }
+    
+    .list-controls .category-dropdown-button{
+        left: 4% !important;
+    }
+    
+    .list-controls li:first-of-type .category-dropdown-menu {
+        left: 6vw !important;
+        width: 90vw !important;
+        font-size: .5em;
+    }
+    
+    .list-controls .category-dropdown-menu{
+        left: 0vw !important;
+        width: 90vw !important;
+        font-size: .5em;
+    }
+}
+
+
+
+//change category badge from box to line
+.badge-wrapper.bullet .badge-category-parent-bg, .badge-wrapper.bullet .badge-category-bg{
+    width: initial;
+    height: initial;
+}
+
+.list-controls .category-breadcrumb li.bullet>.badge-category .badge-category-bg {
+    width: .2em;
+    height: .8em;
+}
+
+.list-controls .nav-pills{
+    font-size: 1.2em;
+}
+
+/* Topic List - Styling for the list of topics.
+======================================================================================================================= */
+
+//increase font on topic list
+.topic-list .main-link {
+    font-size: 1.5em;
+}
+
+
+/* Buttons - Styling for the various buttons across the app
+======================================================================================================================= */
+ button#new-account-link{
+     padding-left: 20px;
+     &:hover{
+         color: white;
+         background-color: $quaternary ;
+     }
+ }
+
+.list-button{
+    outline: none;
+}
+
+//stylize new topic button
+#create-topic.btn-default {
+    padding: 80px 20px 30px 20px;
+    top: -10px;
+}
+
+.widget-button.btn.create{
+    .fa-mail-reply:before, .fa-reply:before{
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    }
+    
+    &:after{
+        content: " Reply";
+    }
+    
+    &:hover{
+        background-color: $tertiary;
+    }
+}
+
+#topic-footer-buttons{
+    font-size: 1.45em;
+}
+
+/* Typography - Font styles used across the app
+======================================================================================================================= */
+
+.regular .contents .cooked{
+    font-size: 1.2em;
+}
+
+/* Media Overlay Plugin Overrides
+======================================================================================================================= */
+.lazyYT {
+    width: 100% !important;
+    padding-bottom: 56.25% !important;
+}
+
+.no-touch .media-overlay-eligable:hover .control {
+    z-index: 999;
+}
+
+#media-overlay{
+    width: 40vw;
+}
+
+.media-overlay-eligable{
+    position: relative;
+}

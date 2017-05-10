@@ -1,0 +1,20 @@
+.hamburger-panel .menu-panel, .user-menu .menu-panel{
+    width: 80% !important;
+}
+
+#topic-progress{
+    color: black;
+    border: 1px solid black !important;
+}
+
+//stylize new topic button
+#create-topic.btn-default {
+    padding: 20px 20px 80px 20px;
+    bottom: -70px;
+}
+
+.topic-thumbnail img{
+    width: 90px;
+    height: 45px;
+    object-fit: cover;
+}
